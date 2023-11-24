@@ -10,6 +10,9 @@ h2 ,h3, h4 {
 p{
     color: var(--secondary-text);
 }
+svg{
+    fill: white;
+}
 .body{
     background-color: var(--first-color);
 }
@@ -71,4 +74,102 @@ p{
 .about-me__photo img{
     width: 411px;
     margin: auto;
+}
+.projects{
+
+}
+.projects_subtitle{
+    margin-block: 20px;
+    font-size: 3rem;
+    text-align: center;
+}
+.content__card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+.card{
+    width: 345px;
+    background-color: #232222;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.card__img{
+    width: 100%;
+    height: 140px;
+}
+.card__img img{
+    width: 100%;
+    height: 100%;
+}
+.card__title{
+    font-size: 2.7rem;
+    margin: 0 10px;
+}
+.card__languages{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.9rem;
+}
+.card__content-info{
+    width: 70%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+}
+.card__content-info a svg{
+    height: 20px;
+}
+.skill{
+    margin-block-end: 15px;
+    width: 100%;
+
+}
+.skill__subtitle{
+    margin-block: 20px;
+    font-size: 3rem;
+    text-align: center;
+}
+.skill__content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.skill__content__icons svg{
+    height: 40px;
+}
+.skill__content__icons--html svg{
+    fill: #DF4A17;
+}
+.skill__content__icons--css svg{
+    fill: #004AE1;
+}
+.skill__content__icons--js svg{
+    fill: #F7D800;
+}
+.skill__content__icons--react svg{
+    fill: #5ED3F3;
+}
+.skill__content__icons--sass svg{
+    fill: #C76494;
+}
+.skill__content__icons--pug{
+    color: white;
+    font-size: 3.3rem;
+}
+.skill__content__icons--git svg{
+    fill: #E84E31;
+}
+.skill__content__icons--github svg{
+    fill: white;
+}
+.skill__content__icons--trello svg{
+    fill: #0C5DD3;
+}
+.contact-me{
+    background-color: violet;
+}
+.footer{
+    background-color: aqua;
 }
