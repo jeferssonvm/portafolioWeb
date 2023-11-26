@@ -14,12 +14,19 @@ svg{
     fill: white;
 }
 .body{
+    background-color: #2b2b2b;
+    width: 100vw;
+}
+.content-portfolio{
     background-color: var(--first-color);
+    width: 100%;
+    max-width: 938px;
+    margin: auto;
 }
 .header{
     
     color: var(--first-text);
-    width: 100vw;
+    width: 100%;
     height: 80px;
     padding: clamp(5px , 2%, 12px);
     flex-wrap: wrap;
@@ -28,17 +35,22 @@ svg{
     justify-content: space-between;
 
 }
+.header__name{
+    margin: auto;
+}
 .personal-brand{
     font-size: 2rem;
     font-weight: bold;
 }
 .header__nav{
-    margin-inline-end: 20px;
+    margin: auto;
+    padding-inline-start: 25px;
 }
 .header__items{
     display: flex;
     gap: 12px;
     color: var(--third-text);
+    margin-inline-end: 20px;
     
 }
 
@@ -52,13 +64,16 @@ svg{
     border-block-end: 2px solid var(--first-text);
 }
 .about-me{
-    width: 100vw;
+    width: 90%;
+    
+    margin: 50px auto;
     background-color: var(--first-color);
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
 }
 .about-me__description{
     flex: 1;
+    min-width: 264px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,19 +82,27 @@ svg{
 }
 .about-me__title{
     font-size: 3rem;
+    text-align: center;
+    text-wrap: balance;
 }
 .about-me__info{
-    font-size: 1.2rem;
+    font-size: 1.8rem;
+    text-wrap: pretty;
 }
 .about-me__photo{
     flex: 1;
+    min-width: 264px;
 }
 .about-me__photo img{
     width: 411px;
     margin: auto;
 }
 .projects{
-
+    width: 90%;
+    margin: auto;
+    margin-block-start: 54px;
+    border-block-start: 1px solid var(--third-text);
+    
 }
 .projects_subtitle{
     margin-block: 20px;
@@ -125,8 +148,11 @@ svg{
     height: 20px;
 }
 .skill{
+    margin: auto;
     margin-block-end: 15px;
-    width: 100%;
+    width: 90%;
+    margin-block-start: 54px;
+    border-block-start: 1px solid var(--third-text);
 
 }
 .skill__subtitle{
@@ -177,6 +203,11 @@ svg{
     fill: #0C5DD3;
 }
 .contact-me{
+    width: 90%;
+    margin: auto;
+    margin-block-start: 54px;
+    border-block-start: 1px solid var(--third-text);
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -257,22 +288,26 @@ svg{
 }
 .form__submit{
     color: var(--third-text);
-    background-color: transparent;
+    width: 90px;
     font-size: 2.0rem;
     margin-block: 30px;
     margin-inline: auto 50px;
+    background-color: transparent;
     cursor: pointer;
     border: none;
     border-block-end: 1px solid var(--secondary-text);
+    transition: all 0.3s ease;
 
 }
 .form__submit:hover{
 	color: var(--first-text);
+    font-weight: bold;
     border-block-end: 3px solid var(--first-text);
 }
 .footer{
     width: 100%;
     height: 60px;
+    margin-block-start: 50px;
     display: flex;
 }
 .footer__name{
@@ -290,4 +325,25 @@ svg{
 }
 .social-networks li a svg{
     height: 20px;
+}
+@keyframes show{
+    from {
+        opacity: 0;
+        scale: 20%;
+    }
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+.skill.Scroll-animation li,
+.card{
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
 }
