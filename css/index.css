@@ -4,7 +4,7 @@
     --secondary-text: #DCDCDC;
     --third-text:#7E7E7E;
 }
-h2 ,h3, h4 {
+h2 ,h3, h4, label,input {
     color: var(--first-text);   
 }
 p{
@@ -28,9 +28,12 @@ svg{
     justify-content: space-between;
 
 }
-.header__name{
+.personal-brand{
     font-size: 2rem;
     font-weight: bold;
+}
+.header__nav{
+    margin-inline-end: 20px;
 }
 .header__items{
     display: flex;
@@ -131,6 +134,12 @@ svg{
     font-size: 3rem;
     text-align: center;
 }
+.card__content-info a svg{
+    fill: var(--third-text);
+}
+.card__content-info a svg:hover{
+    fill: var(--first-text);
+}
 .skill__content{
     display: flex;
     flex-wrap: wrap;
@@ -168,8 +177,117 @@ svg{
     fill: #0C5DD3;
 }
 .contact-me{
-    background-color: violet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-me__subtitle{
+    margin-block: 30px;
+    font-size: 3rem;
+    text-align: center;
+    display: flex;
+    gap: 25px;
+    
+}
+.contact-me__subtitle svg {
+    height: 100%;
+}
+.form_content{
+        min-width: 380px;
+        max-width: 760px;
+		height: 80px;
+		max-width: 400px;
+		position: relative;
+		overflow: hidden;
+}
+.form_content .form__input{
+        width: 100%;
+		height: 100%;
+		background: none;
+		color: #fff;
+		padding-top: 41px;
+        padding-inline-start: 10px;
+		border: none;
+		outline: 0px;
+        
+}
+.form_content .form__input,
+.form_content .form__label{
+    font-size: 1.8rem;
+}
+
+.form_content .form__label{
+        position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		border-bottom: 1px solid #c7c7c7;
+}
+.form_content .form__label::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid var(--secondary-text);
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+.label__nombre{
+        position: absolute;
+		bottom: 5px;
+		left: 0;
+        color: var(--third-text);
+		transition: all 0.3s ease;
+}
+.form_content .form__input:focus + .form__label .label__nombre,
+.form_content .form__input:valid + .form__label .label__nombre{
+    transform: translateY(-150%);
+	font-size: 1.6rem;
+	color: var(--first-text);
+}
+.form_content .form__input:focus + .label__nombre::after,
+.form_content .form__input:valid + .label__nombre::after{
+    transform: translateX(0%);
+
+}
+.form__submit{
+    color: var(--third-text);
+    background-color: transparent;
+    font-size: 2.0rem;
+    margin-block: 30px;
+    margin-inline: auto 50px;
+    cursor: pointer;
+    border: none;
+    border-block-end: 1px solid var(--secondary-text);
+
+}
+.form__submit:hover{
+	color: var(--first-text);
+    border-block-end: 3px solid var(--first-text);
 }
 .footer{
-    background-color: aqua;
+    width: 100%;
+    height: 60px;
+    display: flex;
+}
+.footer__name{
+    flex: 1;
+    margin: auto;
+    text-align: center;
+}
+
+.social-networks{
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.social-networks li a svg{
+    height: 20px;
 }
