@@ -202,6 +202,9 @@ svg{
 .skill__content__icons--trello svg{
     fill: #0C5DD3;
 }
+.skill__content__icons--tailwind svg{
+    fill: #36B7F0;
+}
 .contact-me{
     width: 90%;
     margin: auto;
